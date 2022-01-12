@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Register</title><style>
+					.head-block{
+						background-color: #8CB3B8;
+						text-align: center;
+						margin-top: 0px;
+						border-top-right-radius: 10px;
+						border-top-left-radius: 10px;
+						background: -webkit-linear-gradient(top, powderblue 0%, #8CB3B8 100%);
+					}
+					.bot-block{
+							background-color: #8CB3B8;
+							margin-top: 0px;
+							border-bottom-right-radius: 10px;
+							border-bottom-left-radius: 10px;
+							background: -webkit-linear-gradient(bottom, powderblue 0%, #8CB3B8 100%);
+					}
+					.block {
+						background-color: powderblue;
+						width: 30%;
+						margin-top: 0px;
+						float: left;
+						border-radius: 10px;
+						box-shadow: 0 2px 6px 0 gray, 0 3px 10px 0 gray;
+						margin-left: 35%;
+						margin-bottom: 30px;
+						margin-right: 35%;
+					}
+					.but{
+						border: none;
+						background-color: none;
+						background: none;
+						cursor: pointer;
+					}
+					.but:link, .but:visited, .but {
+			    color: black;
+			    text-align: center;
+			    text-decoration: none;
+					display: inline-block;
+					width: 49.5%;
+					text-align:center;
+					margin-left: 0;
+					padding-bottom: 15px;
+					padding-top: 15px;
+					}
+				.logout{
+					float:right;
+				}
+				.but:hover{
+				    background-color: #8CB3B8;
+				}
+				.logo{
+					border-radius: 45%;
+				}
+				.text{
+				border-top-right-radius: 10px;
+				border-top-left-radius: 10px;
+				font-style: italic;
+				}
+				.footer{
+				border-top-right-radius: 10px;
+				border-top-left-radius: 10px;
+					background-color: powderblue;
+					width:70%;
+					margin-left: 15%;
+					margin-right: 15%;
+					margin-top: 320px;
+				}
+				td{
+					font-weight: bold;
+					text-transform: uppercase;
+				}
+		</style>
+	</head>
+
+	<body background = "Capture.jpg">
+		<center><img src="ptll.PNG" alt="Logo" width="200" height="200" class="logo"></center>
+
+			<div class="block">
+		<form action="register.php" method="post">
+			<table>
+					<h1 class="head-block">
+				<center>Register Page</center>
+			</h1>
+				<tr>
+					<td>First Name:</td>
+					<td><input type="text" size=25 name="first"></td>
+				</tr>
+
+				<tr>
+					<td>Last Name:</td>
+					<td><input type="text" size=25 name="last"></td>
+				</tr>
+
+				<tr>
+					<td>Phone Number:</td>
+					<td><input type="text" size=25 name="phone"></td>
+				</tr>
+
+				<tr>
+					<td>Email:</td>
+					<td><input type="email" size=25 name="email"></td>
+				</tr>
+
+				<tr>
+					<td>Password:</td>
+					<td><input type="Password" size=25 name="pass"></td>
+				</tr>
+
+				<tr>
+					<td>Type</td>
+					<td><select name="type">
+					  <option value="Volunteer" selected>Volunteer</option>
+					  <option value="Owner">Owner</option>
+					</select></td>
+				</tr>
+			</table>
+
+				<a href="lrhelp.html">Need Help?</a>
+			<div class="bot-block">
+				<input type="submit"  value="Register" class="but">
+				<a href="signIn.html" class="but">Back</a>
+			</div>
+		</form>
+	</div>
+
+		<div class="footer">
+			<div class="text">
+						<h2 class="head-block quote"><center>The average dog is a nicer person than the average person. <br> Spend more time with dogs! <center></h2>
+			</div>
+			<center><img src="3dogs(2).PNG" alt="dog pic" width="700" heignt="200"></center>
+		</div>
+
+
+	</body>
+
+</html>

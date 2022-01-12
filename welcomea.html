@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Welcome</title>
+		<script src="js/functions.js"></script>
+		<style>
+			.div-body{
+				margin-left: 10%;
+				background-color: white;
+				margin-top: 70px;
+				border-radius: 12px;
+    		box-shadow: 0 4px 8px 0 gray, 0 6px 20px 0 gray;
+				width:80%;
+				padding-bottom: 20px;
+			}
+			.header-container{
+				position: fixed;
+		    top: 0;
+				left:0;
+		    width: 100%;
+		    background-color: powderblue;
+				padding-left: 2px;
+				padding-right: 2px;
+				background-color: powderblue;
+				background: -webkit-linear-gradient(top, powderblue 0%, #8CB3B8 100%);
+				z-index: 1 ;
+			}
+			a:link, a:visited {
+	    color: white;
+	    text-align: center;
+	    text-decoration: none;
+			display: inline-block;
+			width: 80px;
+			text-align:center;
+			padding-bottom: 15px;
+			padding-top: 15px;
+			width:80px;
+}
+		a:hover {
+		    background-color: #8CB3B8;
+		}
+				.logout, .help{
+					float:right;
+				}
+
+			.admin-head{
+				padding-left: 0px;
+				margin-right: 0px;
+				background-color: #8CB3B8;
+				text-align: center;
+				margin-top: 0px;
+				border-top-right-radius: 10px;
+				border-top-left-radius: 10px;
+				background: -webkit-linear-gradient(top, powderblue 0%, #8CB3B8 100%);
+			}
+
+			.head-block{
+				padding-left: 10px;
+				padding-right: 10px;
+				background-color: #8CB3B8;
+				text-align: center;
+				margin-top: 0px;
+				border-top-right-radius: 10px;
+				border-top-left-radius: 10px;
+				background: -webkit-linear-gradient(top, powderblue 0%, #8CB3B8 100%);
+			}
+			.block {
+				display: inline-block;
+				background-color: powderblue;
+				width: 30%;
+				margin: 3%;
+				margin-top: 0px;
+				float: left;
+				border-radius: 10px;
+    		box-shadow: 0 2px 6px 0 gray, 0 3px 10px 0 gray;
+			}
+
+			.block-container {
+				display: flex;
+    		width: 100%;
+			}
+			.slider {
+			  max-width: 80%;
+			  min-height: 550px;
+				max-height: 5000px;
+			  margin-left: 8%;
+				margin-right: 8%;
+			  position: relative;
+			}
+			.slide1,.slide2,.slide3,.slide4,.slide5 {
+			  position: absolute;
+			  width: 100%;
+			  height: 100%;
+					z-index: 0;
+			}
+			.slide1 {
+			  background: url(ssd1.jpg)no-repeat center;
+			      background-size: cover;
+			    animation:fade 20s infinite;
+			-webkit-animation:fade 20s infinite;
+
+			}
+			.slide2 {
+			  background: url(ssd2.jpg)no-repeat center;
+			      background-size: cover;
+			    animation:fade2 20s infinite;
+			-webkit-animation:fade2 20s infinite;
+			}
+			.slide3 {
+			    background: url(ssd3.jpg)no-repeat center;
+			      background-size: cover;
+			    animation:fade3 20s infinite;
+			-webkit-animation:fade3 20s infinite;
+			}
+			.slide4 {
+			  background: url(ssd4.jpg);
+			      background-size: cover;
+			    animation:fade4 20s infinite;
+			-webkit-animation:fade4 20s infinite;
+			}
+			.slide5 {
+			    background: url(ssd5.jpg)no-repeat center;
+			      background-size: cover;
+			    animation:fade5 20s infinite;
+			-webkit-animation:fade5 20s infinite;
+			}
+			.search{
+				position: absolute;
+			}
+			.search-but{
+				margin-top: 20px;
+			}
+			@keyframes fade
+			{
+			  0%   {opacity:1}
+			  20% { opacity: 0}
+			  40% { opacity: 0}
+			  60% { opacity: 0}
+			  80% { opacity: 0}
+			  100% { opacity: 1}
+			}
+			@keyframes fade2
+			{
+			  0%   {opacity:0}
+			  20% { opacity: 1}
+			  40% { opacity: 0}
+			  60% { opacity: 0}
+			  80% { opacity: 0}
+			  100% { opacity: 0}
+			}
+			@keyframes fade3
+			{
+			  0%   {opacity:0}
+			  20% { opacity: 0}
+			  40% { opacity: 1}
+			  60% { opacity: 0}
+			  80% { opacity: 0}
+			  100% { opacity: 0}
+			}
+			@keyframes fade4
+			{
+			  0%   {opacity:0}
+			  20% { opacity: 0}
+			  40% { opacity: 0}
+			  60% { opacity: 1}
+			  80% { opacity: 0}
+			  100% { opacity: 0}
+			}
+			@keyframes fade5
+			{
+			  0%   {opacity:0}
+			  20% { opacity: 0}
+			  40% { opacity: 0}
+			  60% { opacity: 0}
+			  80% { opacity: 1}
+			  100% { opacity: 0}
+			}
+		</style>
+	</head>
+
+	<body background = "Capture.jpg">
+		<div class="header-container">
+			<a href="Profile.html">Profile</a>
+			<a class="logout" href="signin.html">Logout</a>
+			<a class="help" href="adminhelp.html">Help</a>
+		</div>
+		<div class="div-body">
+
+			<h1 class="admin-head">Admin Page</h1>
+
+		<div class="block-container">
+			<div class="block">
+				<h1 class="head-block">Search Volunteers</h1>
+				<form action="displayvolunteers.php" method="post">
+					<table>
+						<tr>
+							<td colspan="2">
+								<label>Search</label>
+								<input name="email" type="text">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>By</label>
+								<select name="type">
+							  <option value="email" selected>Email</option>
+							  <option value="first">First</option>
+							  <option value="last">Last</option>
+							</select></td>
+						</tr>
+						<tr>
+								<td><input type="submit" value="Display"></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+
+			<div class="block">
+				<h1 class="head-block">Search Owners</h1>
+				<form action="displayowners.php" method="post">
+					<table>
+						<tr>
+							<td colspan="2">
+								<label>Search</label>
+								<input name="email" type="text">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>By</label>
+								<select name="type">
+							  <option value="email" selected>Email</option>
+							  <option value="first">First</option>
+							  <option value="last">Last</option>
+							</select></td>
+						</tr>
+						<tr>
+								<td><input type="submit" value="Display"></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+
+			<div class="block">
+				<h1 class="head-block">Search Requests</h1>
+				<form action="displayappointmentsa.php" method="post">
+					<table>
+						<tr>
+							<td colspan="2" id="searchby">
+									<label>Date</label>
+									<input name="date" type="date">
+								</td>
+							</tr>
+							<tr><td><center>OR</center><td></tr>
+							<tr>
+									<td colspan="2" id="searchby">
+											<label>Email</label>
+											<input name="email" type="email">
+										</td>
+									</tr>
+							<tr>
+								<td><input type="submit" value="Display" class="search-but"></td>
+							</tr>
+						</table>
+					</form>
+				</div>
+			</div>
+		<ul><div class='slider'>
+  <div class='slide1'></div>
+  <div class='slide2'></div>
+  <div class='slide3'></div>
+  <div class='slide4'></div>
+  <div class='slide5'></div>
+			</div>
+		</ul>
+</div>
+	</body>
+</html>

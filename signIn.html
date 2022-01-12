@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Sign In</title>
+  <style>
+    .head-block {
+      background-color: #8CB3B8;
+      text-align: center;
+      margin-top: 0px;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      background: -webkit-linear-gradient(top, powderblue 0%, #8CB3B8 100%);
+    }
+
+    .bot-block {
+      background-color: #8CB3B8;
+      margin-top: 0px;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      background: -webkit-linear-gradient(bottom, powderblue 0%, #8CB3B8 100%);
+    }
+
+    .block {
+      background-color: powderblue;
+      width: 30%;
+      margin-top: 0px;
+      float: left;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px 0 gray, 0 3px 10px 0 gray;
+      margin-left: 35%;
+      margin-bottom: 30px;
+      margin-right: 35%;
+    }
+
+    .but {
+      border: none;
+      background-color: none;
+      background: none;
+      cursor: pointer;
+    }
+
+    .but:link,
+    .but:visited,
+    .but {
+      color: black;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      width: 49.5%;
+      text-align: center;
+      margin-left: 0;
+      padding-bottom: 15px;
+      padding-top: 15px;
+    }
+
+    .logout {
+      float: right;
+    }
+
+    .but:hover {
+      background-color: #8CB3B8;
+    }
+
+    .logo {
+      border-radius: 45%;
+    }
+
+    .text {
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      font-style: italic;
+    }
+
+    .footer {
+      margin-top: 250px;
+      border-radius: 10px;
+      background-color: powderblue;
+      width: 70%;
+      margin-left: 15%;
+      margin-right: 15%;
+    }
+  </style>
+</head>
+
+<body background="Capture.jpg">
+  <center><img src="ptll.PNG" alt="Logo" width="200" height="200" class="logo"></center>
+  <form action="signin.php" method="POST">
+    <div class="block">
+      <table>
+        <h1 class="head-block">
+						<center>Sign-In</center>
+					</h1>
+        <tr>
+          <td style="font-weight:bold; text-transform: uppercase;">Email:</td>
+          <td>
+            <input type="text" size=25 name="email">
+          </td>
+        </tr>
+        <tr>
+          <td style=" font-weight:bold; text-transform: uppercase;">Password:</td>
+          <td>
+            <input type="password" size=25 name="pass">
+          </td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold; text-transform: uppercase;">Type</td>
+          <td>
+            <select name="type">
+              <option value="Volunteer" selected>Volunteer</option>
+              <option value="Owner">Owner</option>
+              <option value="Admin">Admin</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+      <a href="lrhelp.html">Need Help?</a>
+      <div class="bot-block">
+        <input type="submit" value="Login" class="but">
+        <a href="register.html" class="but">Register</a>
+      </div>
+    </div>
+  </form>
+  </center>
+  <div class="footer">
+    <div class="text">
+      <h2 class="head-block quote"><center>The average dog is a nicer person than the average person. <br> Spend more time with dogs! <center></h2>
+    </div>
+    <center><img src="3dogs.PNG" alt="dog pic" width="700" heignt="200"></center>
+  </div>
+</body>
+</html>
